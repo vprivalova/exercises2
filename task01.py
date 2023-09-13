@@ -4,10 +4,10 @@
 """
 
 
-ptr = input()
+text = input()
 count = 0
 count_values = []
-for item in ptr:
+for item in text:
     if item.isspace():
         count = count + 1
     else:
