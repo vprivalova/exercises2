@@ -8,11 +8,13 @@
 первым нарушил правила игры.
 """
 
-count = 0
 line = input().split()
+
+count = 0
 
 for item in range(len(line)):
     line[item] = line[item].lower()
+
 
 for i in range(1, len(line)):
     if line[i-1][-1] == line[i][0]:
@@ -24,6 +26,7 @@ for i in range(1, len(line)):
         else:
             print('Победитель: Вася')
         break
+
 
 if count == 0:
     if len(line) % 2 == 0:

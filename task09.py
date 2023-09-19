@@ -3,13 +3,13 @@
 Дано предложение. В нем только два слова одинаковые. Найти эти слова.
 """
 
-signs = '.,?!():"'
+SIGNS = '.,?!():"'
 
 sentence = input().split()
 
 for word in range(len(sentence)):
     for index in range(len(sentence[word])):
-        if (sentence[word])[index] in signs:
+        if (sentence[word])[index] in SIGNS:
             sentence[word] = sentence[word].replace((sentence[word])[index], '')
 
 for item in range(len(sentence)):

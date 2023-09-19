@@ -4,16 +4,16 @@
 в слове нет повторяющихся букв.
 """
 
-signs = '.,?!():"'
+sentence = input().split()
+
+SIGNS = '.,?!():"'
 line = ''
 count = 0
 result = []
 
-sentence = input().split()
-
 for word in range(len(sentence)):
     for index in range(len(sentence[word])):
-        if (sentence[word])[index] in signs:
+        if (sentence[word])[index] in SIGNS:
             sentence[word] = sentence[word].replace((sentence[word])[index], '')
 
 for item in range(len(sentence)):
@@ -33,6 +33,5 @@ for elem in sentence:
         result.append(elem)
     count = 0
     line = ''
-
 
 print(*set(result))

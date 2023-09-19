@@ -3,18 +3,16 @@
 Дан текст. Необходимо определить максимальное количество последовательных пробельных символов  в нём.
 """
 
-
 text = input()
+
 count = 0
 count_values = []
+
 for item in text:
     if item.isspace():
         count = count + 1
     else:
         count_values.append(count)
         count = 0
+
 print(max(count_values))
-
-
-
-

@@ -3,7 +3,6 @@
 Дано предложение. Напечатать его в обратном порядке слов.
 """
 
-
 sentence = input().split()
 
 punct_sign = str(sentence[-1])[-1]
