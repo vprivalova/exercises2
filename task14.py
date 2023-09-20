@@ -1,4 +1,4 @@
-'''
+"""
 Задание 14.
 В телевизионной игре "Поле чудес", игрок отгадывает слово. Напишите программу, которая спрашивает
 у ведущего подсказку и загаданное слово. Далее, программа удаляет информацию с экрана, выполняя
@@ -29,4 +29,43 @@ a
 Буква или слово (0 - буква, 1 - слово)?1
 тигр
 Победа!
-'''
+"""
+
+tip = input("Добро пожаловать в игру 'Поле чудес'!! Введите подсказку:  ")
+word = input("Введите загаданное слово: ")
+word = word.lower()
+
+for i in range(25):
+    print('', end='\n')
+
+word1 = word
+shft_word = len(word)*'*'
+print('Начнем игру! Вот подсказка: ', tip)
+
+while shft_word != word:
+    print(shft_word)
+    choice = input('Буква или слово (0 - буква, 1 - слово)? ')
+
+    if choice == '0':
+        letter = input('Введите букву: ')
+        letter = letter.lower()
+
+        if letter in word:
+            cnt = word.count(letter)
+
+            for nums in range(cnt):
+                index = word1.find(letter)
+                word1 = word1[:index] + '-' + word1[index+1:]
+                shft_word = shft_word[:index] + letter + shft_word[index+1:]
+
+                if shft_word == word:
+                    print(word)
+                    print('Победа!')
+
+    elif choice == '1':
+        guess = input('Введите слово: ')
+
+        if guess.lower() == word:
+            shft_word = word
+            print('Победа!')
+            break
