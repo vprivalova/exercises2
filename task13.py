@@ -17,10 +17,11 @@ ticket = input()
 
 while luck == 0:
     if len(ticket) % 2 == 0:
-        for i in range(len(ticket) // 2):
-            half1 = half1 + int(ticket[i])
-        for j in range(len(ticket) // 2, len(ticket)):
-            half2 = half2 + int(ticket[j])
+        for index1 in range(len(ticket) // 2):
+            half1 = half1 + int(ticket[index1])
+
+        for index2 in range(len(ticket) // 2, len(ticket)):
+            half2 = half2 + int(ticket[index2])
 
         if half1 == half2:
             print(count)
