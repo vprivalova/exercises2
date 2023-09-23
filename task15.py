@@ -1,4 +1,4 @@
-'''
+"""
 Задание 15.
 Напишите программу, позволяющую организовать игру "Быки и коровы" с десятью попытками
 отгадать число. Программа должна спрашивать у ведущего четырехзначное целое число с
@@ -30,4 +30,36 @@
 9305
 Быков: 4 Коров: 0
 Победа
-'''
+"""
+
+number = input('Добро пожаловать в игру! Введите число: ')
+
+for index1 in range(25):
+    print('', end='\n')
+
+bull = 0
+cow = 0
+win = 0
+
+for index2 in range(10):
+    guess = input()
+
+    for index3 in range(4):
+        if guess[index3] in number:
+            if guess[index3] == number[index3]:
+                bull = bull + 1
+            elif guess[index3] != number[index3]:
+                cow = cow + 1
+
+    print('Быков:', bull, 'Коров:', cow)
+
+    if guess == number:
+        print('Победа!')
+        win = win + 1
+        break
+
+    bull = 0
+    cow = 0
+
+if win == 0:
+    print('Проигрыш!')

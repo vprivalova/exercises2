@@ -35,7 +35,7 @@ tip = input("Добро пожаловать в игру 'Поле чудес'!!
 word = input("Введите загаданное слово: ")
 word = word.lower()
 
-for i in range(25):
+for index in range(25):
     print('', end='\n')
 
 word1 = word
