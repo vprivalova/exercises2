@@ -10,7 +10,7 @@
 
 line = input().split()
 
-count = 0
+cnt = 0
 
 for item in range(len(line)):
     line[item] = line[item].lower()
@@ -20,7 +20,7 @@ for i in range(1, len(line)):
     if line[i-1][-1] == line[i][0]:
         pass
     else:
-        count = count + 1
+        cnt = cnt + 1
         if (i + 1) % 2 == 0:
             print('Победитель: Петя')
         else:
@@ -28,7 +28,7 @@ for i in range(1, len(line)):
         break
 
 
-if count == 0:
+if cnt == 0:
     if len(line) % 2 == 0:
         print('Победитель: Вася')
     else:

@@ -11,7 +11,7 @@
 luck = 0
 half1 = 0
 half2 = 0
-count = 1
+cnt = 1
 
 ticket = input()
 
@@ -24,13 +24,13 @@ while luck == 0:
             half2 = half2 + int(ticket[index2])
 
         if half1 == half2:
-            print(count)
+            print(cnt)
             luck = luck + 1
             break
         else:
             ticket = input()
     else:
         ticket = input()
-    count = count + 1
+    cnt = cnt + 1
     half1 = 0
     half2 = 0

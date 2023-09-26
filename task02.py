@@ -5,14 +5,14 @@
 
 text = input()
 
-count = 0
+cnt = 0
 count_values = []
 
 for index in range(len(text) - 1):
     if text[index] == text[index + 1]:
-        count = count + 1
+        cnt = cnt + 1
     else:
-        count_values.append(count)
-        count = 0
+        count_values.append(cnt)
+        cnt = 0
 
 print(max(count_values) + 1)

@@ -9,7 +9,7 @@ line3 = input()
 
 smbl_lines_srtd = ''
 result = []
-count = 0
+cnt = 0
 
 lines = line1 + line2 + line3
 smbl_lines = list(lines)
@@ -25,9 +25,9 @@ smbl_lines_srtd = sorted(smbl_lines_srtd)
 for elem in smbl_lines_srtd:
     for item in smbl_lines:
         if item == elem:
-            count = count + 1
-    if count == 1:
+            cnt = cnt + 1
+    if cnt == 1:
         result.append(elem)
-    count = 0
+    cnt = 0
 
 print(*result)

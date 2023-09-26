@@ -5,7 +5,6 @@
 
 text = input()
 
-count = 0
 letters = ''
 
 for item in text:

@@ -6,22 +6,22 @@
 
 text = input()
 
-count = 0
+cnt = 0
 symbols = ''
 result = ''
 
 for item in text:
     if item not in symbols:
-        symbols = symbols + item
+        symbols = symbols + item  # All unique symbols from the tetxt.
 
 list_of_symbols = sorted(symbols)
 
 for elem in list_of_symbols:
     for item in text:
         if item == elem:
-            count = count + 1
-    if count == 3:
+            cnt = cnt + 1
+    if cnt == 3:
         result = elem
-    count = 0
+    cnt = 0
 
 print(result)

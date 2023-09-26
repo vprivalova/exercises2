@@ -8,7 +8,7 @@ sentence = input().split()
 
 SIGNS = '.,?!():"'
 line = ''
-count = 0
+cnt = 0
 result = []
 
 for word in range(len(sentence)):
@@ -28,10 +28,10 @@ for elem in sentence:
         if letter not in line:
             line = line + letter
         elif letter in line:
-            count = count + 1
-    if count == 0:
+            cnt = cnt + 1
+    if cnt == 0:
         result.append(elem)
-    count = 0
+    cnt = 0
     line = ''
 
 print(*set(result))

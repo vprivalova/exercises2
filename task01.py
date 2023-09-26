@@ -5,14 +5,14 @@
 
 text = input()
 
-count = 0
+cnt = 0
 count_values = []
 
 for item in text:
     if item.isspace():
-        count = count + 1
+        cnt = cnt + 1
     else:
-        count_values.append(count)
-        count = 0
+        count_values.append(cnt)
+        cnt = 0
 
 print(max(count_values))
